@@ -6144,6 +6144,7 @@ a.badge:focus {
 
 .pull-right {
   float: right;
+  margin-right:15px;
 }
 
 .pull-left {

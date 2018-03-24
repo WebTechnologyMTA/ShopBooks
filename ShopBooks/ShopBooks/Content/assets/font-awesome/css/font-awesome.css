@@ -143,6 +143,7 @@ a [class*=" icon-"] {
 }
 .pull-right {
   float: right;
+  margin-right:15px;
 }
 .pull-left {
   float: left;

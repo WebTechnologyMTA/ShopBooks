@@ -1,27 +1,19 @@
-﻿
+﻿@model List<ShopBooks.Models.ChuDe>
+
+
 @{
-    ViewBag.Title = "ShopBook";
+    ViewBag.Title = "ShopBooks";
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
 
 <div id="sidebar" class="span3">
     <div class="well well-small">
         <ul class="nav nav-list">
-            <li><a href="products.html"><span class="icon-chevron-right"></span>Sách Tiếng Việt</a></li>
-            <li><a href="products.html"><span class="icon-chevron-right"></span>Sách Tiếng Anh</a></li>
-            <li><a href="products.html"><span class="icon-chevron-right"></span>Sách Tình Cảm, Tâm Lý</a></li>
-            <li><a href="products.html"><span class="icon-chevron-right"></span>Truyện tranh</a></li>
-            <li><a href="products.html"><span class="icon-chevron-right"></span>Sách Cao Cấp 1 ,2 ,3 </a></li>
-            <li><a href="products.html"><span class="icon-chevron-right"></span>Bộ Sách Cấp 1,2,3</a></li>
-            <li><a href="products.html"><span class="icon-chevron-right"></span>Sách bình luận văn học</a></li>
-            <li><a href="products.html"><span class="icon-chevron-right"></span>Sách chính trị </a></li>
-            <li><a href="products.html"><span class="icon-chevron-right"></span>Sách lịch sử</a></li>
-            <li><a href="products.html"><span class="icon-chevron-right"></span>Sách tự lực</a></li>
-            <li><a href="products.html"><span class="icon-chevron-right"></span>Sách khoa học viễn tưởng</a></li>
-            <li><a href="products.html"><span class="icon-chevron-right"></span>Sách kinh doanh</a></li>
-            <li><a href="products.html"><span class="icon-chevron-right"></span>Sách phi hư cấu</a></li>
+            @foreach (var item in Model)
+            {
+                <li><a href="products.html"><span class="icon-chevron-right"></span>@item.TenChuDe</a></li>
+            }
             <li style="border:0"> &nbsp;</li>
-
         </ul>
     </div>
 
