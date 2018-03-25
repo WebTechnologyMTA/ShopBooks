@@ -92,4 +92,3 @@ C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\EntityFramew
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\EntityFramework.SqlServer.dll
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\EntityFramework.xml
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\EntityFramework.SqlServer.xml
-C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\obj\Debug\ShopBooks.csprojResolveAssemblyReference.cache

@@ -71,8 +71,7 @@ hr.soften {margin: 8px 0;background: #DDD;}
     color: #eee;
     padding: 20px 8px 18px;
     margin-top: 15px;
-    width: 925px;
-    margin-left: 20px;
+	max-width:100%;
 }
 .footer a{color:#bbb; font-size:12px;}
 .copyright {clear: both; padding: 8px; border-top: 1px solid #CCC; font-size: 13px; background: #f2f2f2; box-shadow: 0 0 3px #B1AFAF;}
