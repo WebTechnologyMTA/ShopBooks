@@ -1,0 +1,14 @@
+﻿@model List<ShopBooks.Models.ChuDe>
+
+<ul class="nav nav-list">
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="products.html">
+                <span class="icon-chevron-right"></span>
+                @item.TenChuDe
+            </a>
+        </li>
+    }
+    <li style="border:0">&nbsp;</li>
+</ul>

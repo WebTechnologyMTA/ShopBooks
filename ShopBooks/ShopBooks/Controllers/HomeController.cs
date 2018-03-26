@@ -13,9 +13,11 @@ namespace ShopBooks.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            List<ChuDe> ls = new List<ChuDe>();
-            foreach(var item in db.ChuDes)
+            List<Sach> ls = new List<Sach>();
+            var ListProduct = db.Saches.Take(10);
+            foreach (var item in ListProduct)
             {
+                item.AnhBia = "/Content/assets/product_img/" + item.AnhBia;
                 ls.Add(item);
             }
             return View(ls);
@@ -29,6 +31,16 @@ namespace ShopBooks.Controllers
         public ActionResult About()
         {
             return View();
+        }
+
+        public PartialViewResult PartialMenuList()
+        {
+            List<ChuDe> ls = new List<ChuDe>();
+            foreach (var item in db.ChuDes)
+            {
+                ls.Add(item);
+            }
+            return PartialView("_PartialMenuList", ls);
         }
     }
 }
