@@ -121,23 +121,7 @@
         <div class="row">
             <div id="sidebar" class="span3">
                 <div class="well well-small">
-                    <ul class="nav nav-list">
-                        <li><a href="products.html"><span class="icon-chevron-right"></span>Sách Tiếng Việt</a></li>
-                        <li><a href="products.html"><span class="icon-chevron-right"></span>Sách Tiếng Anh</a></li>
-                        <li><a href="products.html"><span class="icon-chevron-right"></span>Sách Tình Cảm, Tâm Lý</a></li>
-                        <li><a href="products.html"><span class="icon-chevron-right"></span>Truyện tranh</a></li>
-                        <li><a href="products.html"><span class="icon-chevron-right"></span>Sách Cao Cấp 1 ,2 ,3 </a></li>
-                        <li><a href="products.html"><span class="icon-chevron-right"></span>Bộ Sách Cấp 1,2,3</a></li>
-                        <li><a href="products.html"><span class="icon-chevron-right"></span>Sách bình luận văn học</a></li>
-                        <li><a href="products.html"><span class="icon-chevron-right"></span>Sách chính trị </a></li>
-                        <li><a href="products.html"><span class="icon-chevron-right"></span>Sách lịch sử</a></li>
-                        <li><a href="products.html"><span class="icon-chevron-right"></span>Sách tự lực</a></li>
-                        <li><a href="products.html"><span class="icon-chevron-right"></span>Sách khoa học viễn tưởng</a></li>
-                        <li><a href="products.html"><span class="icon-chevron-right"></span>Sách kinh doanh</a></li>
-                        <li><a href="products.html"><span class="icon-chevron-right"></span>Sách phi hư cấu</a></li>
-                        <li style="border:0"> &nbsp;</li>
-
-                    </ul>
+                    @{Html.RenderAction("PartialMenuList", "Home"); }
                 </div>
 
                 <div class="well well-small alert alert-warning cntr">
@@ -155,12 +139,10 @@
             </div>
             @RenderBody()
         </div>
-    </div>
-    </div> <!-- Body wrapper -->
-    <!--
-    Clients
-    -->
-    <div class="container">
+        <!-- Body wrapper -->
+        <!--
+        Clients
+        -->
         <section class="our_client">
             <hr class="soften" />
             <h4 class="title cntr"><span class="text">Manufactures</span></h4>
@@ -186,10 +168,11 @@
                 </div>
             </div>
         </section>
+    </div>
+    <!--Container-->
 
-        <!--
-        Footer
-        -->
+    <!--Footer-->
+    <div class="container">
         <footer class="footer">
             <div class="row-fluid">
                 <div class="span2">
@@ -225,9 +208,7 @@
                 </div>
             </div>
         </footer>
-    </div><!-- /container -->
-
-    <div class="container">
+        <!--Footer-->
         <div class="copyright">
             <p class="pull-right">
                 <a href="#"><img src="~/Content/assets/img/maestro.png" alt="payment"></a>
@@ -238,6 +219,7 @@
             </p>
             <span>Copyright &copy; 2013<br> bootstrap ecommerce shopping template</span>
         </div>
+        <!--Copyright-->
     </div>
     <a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>
     <!-- Placed at the end of the document so the pages load faster -->
