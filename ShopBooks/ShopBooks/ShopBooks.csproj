@@ -283,6 +283,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Shared\_ProductLayout.cshtml" />
     <Content Include="Views\Shared\_PartialMenuList.cshtml" />
+    <Content Include="Views\Demo\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
