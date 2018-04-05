@@ -245,7 +245,6 @@
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Shared\_HomeLayout.cshtml" />
-    <Content Include="Views\Product\ProductDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -283,7 +282,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Shared\_ProductLayout.cshtml" />
     <Content Include="Views\Shared\_PartialMenuList.cshtml" />
-    <Content Include="Views\Demo\Index.cshtml" />
+    <Content Include="Views\Product\Detail.cshtml" />
+    <Content Include="Views\Shared\_PartialProduct.cshtml" />
+    <Content Include="Views\Home\Category.cshtml" />
+    <Content Include="Views\Home\ProductDetail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

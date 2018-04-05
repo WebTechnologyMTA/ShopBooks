@@ -4,7 +4,7 @@
     ViewBag.Title = "ShopBooks";
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
-<link href="~/Content/assets/style.css" rel="stylesheet" />
+
 <div class="span9">
     <div class="well np">
         <div id="myCarousel" class="carousel slide homCar">
@@ -222,20 +222,7 @@
                 <ul class="thumbnails">
                     @foreach (var item in Model)
                     {
-                        <li class="span4">
-                            <div class="thumbnail">
-                                <a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-                                <a href="product_details.html"><img class="image-book" src="@item.AnhBia" alt=""></a>
-                                <div class="caption">
-                                    <h5>@item.TenSach</h5>
-                                    <h4>
-                                        <a class="defaultBtn" href="product_details.html" title="Click to view"><span class="icon-zoom-in"></span></a>
-                                        <a class="shopBtn" href="#" title="add to cart"><span class="icon-plus"></span></a>
-                                        <span class="pull-right">@item.GiaBan</span>
-                                    </h4>
-                                </div>
-                            </div>
-                        </li>
+                        @Html.Partial("_PartialProduct", item)
                     }
                 </ul>
             </div>
