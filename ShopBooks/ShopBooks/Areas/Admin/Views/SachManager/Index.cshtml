@@ -1,0 +1,98 @@
+﻿@model IEnumerable<ShopBooks.Models.Sach>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@helper Truncate(string input, int length)
+{
+    if (input.Length <= length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0, length)<text>...</text>
+    }
+}
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Dashboard</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table table-bordered table-hover">
+            <tr style="background-color:Highlight">
+                <th  style="text-align:center">
+                    Tên chủ đề
+                </th>
+                <th>
+                    Tên nhà xuất bản
+                </th>
+                <th style="width:60px">
+                    Tên sách
+                </th>
+                <th>
+                    Giá bán
+                </th>
+                <th>
+                    Mô tả
+                </th>
+                <th>
+                    Ngày cập nhật
+                </th>
+                <th>
+                    Ảnh bìa
+                </th>
+                <th>
+                    Số lượng
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ChuDe.TenChuDe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NhaXuatBan.TenNXB)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenSach)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GiaBan)
+                    </td>
+                    <td>
+                        @Truncate(item.MoTa, 100)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NgayCapNhat)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AnhBia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SoLuongTon)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.MaSach }, new { @class = "btn btn-primary"})
+                        @Html.ActionLink("Details", "Details", new { id = item.MaSach }, new { @class = "btn btn-success"})
+                        @Html.ActionLink("Delete", "Delete", new { id = item.MaSach }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+<!-- /#page-wrapper -->

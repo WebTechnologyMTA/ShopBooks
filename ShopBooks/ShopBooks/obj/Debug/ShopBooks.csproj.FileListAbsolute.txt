@@ -92,4 +92,3 @@ C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.H
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Mvc.xml
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\obj\Debug\ShopBooks.dll
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\obj\Debug\ShopBooks.pdb
-C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\obj\Debug\ShopBooks.csprojResolveAssemblyReference.cache

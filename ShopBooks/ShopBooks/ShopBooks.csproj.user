@@ -6,12 +6,14 @@
     <WebStackScaffolding_IsLayoutPageSelected>True</WebStackScaffolding_IsLayoutPageSelected>
     <WebStackScaffolding_IsPartialViewSelected>False</WebStackScaffolding_IsPartialViewSelected>
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>False</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
-    <WebStackScaffolding_LayoutPageFile>~/Views/Shared/_ProductLayout.cshtml</WebStackScaffolding_LayoutPageFile>
+    <WebStackScaffolding_LayoutPageFile>~/Areas/Admin/Views/Shared/_Layout.cshtml</WebStackScaffolding_LayoutPageFile>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
     <ProjectView>ProjectFiles</ProjectView>
     <WebStackScaffolding_DbContextDialogWidth>600</WebStackScaffolding_DbContextDialogWidth>
     <WebStackScaffolding_DbContextTypeFullName>ShopBooks.Models.ModelDbContext</WebStackScaffolding_DbContextTypeFullName>
+    <WebStackScaffolding_AreaDialogWidth>600</WebStackScaffolding_AreaDialogWidth>
+    <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

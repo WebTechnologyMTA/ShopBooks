@@ -1,0 +1,98 @@
+﻿@model ShopBooks.Models.Sach
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Dashboard</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div>
+            <h2>Details</h2>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    Tên chủ đề
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ChuDe.TenChuDe)
+                </dd>
+
+                <dt>
+                    Tên nhà xuất bản
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.NhaXuatBan.TenNXB)
+                </dd>
+
+                <dt>
+                    Tên sách
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TenSach)
+                </dd>
+
+                <dt>
+                    Giá bán
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.GiaBan)
+                </dd>
+
+                <dt>
+                    Mô tả
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MoTa)
+                </dd>
+
+                <dt>
+                    Ngày cập nhật
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.NgayCapNhat)
+                </dd>
+
+                <dt>
+                    Tên file ảnh
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.AnhBia)
+                </dd>
+
+                <dt>
+                    Số lượng
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.SoLuongTon)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Moi)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Moi)
+                </dd>
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.MaSach }, new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-success" })
+        </p>
+    </div>
+</div>
