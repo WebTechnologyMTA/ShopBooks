@@ -391,6 +391,12 @@
     <Content Include="Areas\Admin\Views\SachManager\Details.cshtml" />
     <Content Include="Areas\Admin\Views\SachManager\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\SachManager\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ChuDeManager\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ChuDeManager\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ChuDeManager\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\ChuDeManager\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ChuDeManager\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ChuDeManager\PartialCategories.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -401,6 +407,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\ChuDeManagerController.cs" />
     <Compile Include="Areas\Admin\Controllers\SachManagerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -433,13 +440,13 @@
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Shared\_ContactLayout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Shared\_ProductLayout.cshtml" />
     <Content Include="Views\Shared\_PartialMenuList.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\Shared\_PartialProduct.cshtml" />
-    <Content Include="Views\Home\Category.cshtml" />
+    <Content Include="Views\Home\Browse.cshtml" />
     <Content Include="Views\Home\ProductDetail.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -449,8 +456,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Views\Default\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

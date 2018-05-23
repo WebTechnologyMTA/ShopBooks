@@ -44,7 +44,7 @@ namespace ShopBooks.Controllers
         }
 
         // GET: Category/ID
-        public ActionResult Category(int ID)
+        public ActionResult Browse(int ID)
         {
             List<Sach> ls = db.Saches.Where(x => x.MaChuDe == ID).ToList();
             foreach(var item in ls)
@@ -55,7 +55,7 @@ namespace ShopBooks.Controllers
         }
 
         // GET: ProductDetail/ID
-        public ActionResult ProductDetail(int ID)
+        public ActionResult ProductDetails(int ID)
         {
             var sach = db.Saches.Where(x => x.MaSach == ID).SingleOrDefault();
             sach.AnhBia = "/Content/assets/product_img/" + sach.AnhBia;

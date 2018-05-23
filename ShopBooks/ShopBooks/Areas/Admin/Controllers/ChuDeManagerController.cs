@@ -10,112 +10,108 @@ using ShopBooks.Models;
 
 namespace ShopBooks.Areas.Admin.Controllers
 {
-    public class SachManagerController : Controller
+    public class ChuDeManagerController : Controller
     {
         private ModelDbContext db = new ModelDbContext();
 
-        // GET: Admin/SachManager
+        // GET: Admin/ChuDeManager
         public ActionResult Index()
         {
-            var saches = db.Saches.Include(s => s.ChuDe).Include(s => s.NhaXuatBan);
-            return View(saches.ToList());
+            return View(db.ChuDes.ToList());
         }
 
-        // GET: Admin/SachManager/Details/5
+        public ActionResult PartialCategories()
+        {
+            return PartialView(db.ChuDes.ToList());
+        }
+
+        // GET: Admin/ChuDeManager/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Sach sach = db.Saches.Find(id);
-            if (sach == null)
+            ChuDe chuDe = db.ChuDes.Find(id);
+            if (chuDe == null)
             {
                 return HttpNotFound();
             }
-            return View(sach);
+            return View(chuDe);
         }
 
-        // GET: Admin/SachManager/Create
+        // GET: Admin/ChuDeManager/Create
         public ActionResult Create()
         {
-            ViewBag.MaChuDe = new SelectList(db.ChuDes, "MaChuDe", "TenChuDe");
-            ViewBag.MaNXB = new SelectList(db.NhaXuatBans, "MaNXB", "TenNXB");
             return View();
         }
 
-        // POST: Admin/SachManager/Create
+        // POST: Admin/ChuDeManager/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaSach,TenSach,GiaBan,MoTa,NgayCapNhat,AnhBia,SoLuongTon,MaChuDe,MaNXB,Moi")] Sach sach)
+        public ActionResult Create([Bind(Include = "MaChuDe,TenChuDe")] ChuDe chuDe)
         {
             if (ModelState.IsValid)
             {
-                db.Saches.Add(sach);
+                db.ChuDes.Add(chuDe);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.MaChuDe = new SelectList(db.ChuDes, "MaChuDe", "TenChuDe", sach.MaChuDe);
-            ViewBag.MaNXB = new SelectList(db.NhaXuatBans, "MaNXB", "TenNXB", sach.MaNXB);
-            return View(sach);
+            return View(chuDe);
         }
 
-        // GET: Admin/SachManager/Edit/5
+        // GET: Admin/ChuDeManager/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Sach sach = db.Saches.Single(s => s.MaSach == id);
-            if (sach == null)
+            ChuDe chuDe = db.ChuDes.Find(id);
+            if (chuDe == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.MaChuDe = new SelectList(db.ChuDes, "MaChuDe", "TenChuDe", sach.MaChuDe);
-            ViewBag.MaNXB = new SelectList(db.NhaXuatBans, "MaNXB", "TenNXB", sach.MaNXB);
-            return View(sach);
+            return View(chuDe);
         }
 
-        // POST: Admin/SachManager/Edit/5
+        // POST: Admin/ChuDeManager/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaSach,TenSach,GiaBan,MoTa,NgayCapNhat,AnhBia,SoLuongTon,MaChuDe,MaNXB,Moi")] Sach sach)
+        public ActionResult Edit([Bind(Include = "MaChuDe,TenChuDe")] ChuDe chuDe)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(sach).State = EntityState.Modified;
+                db.Entry(chuDe).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.MaChuDe = new SelectList(db.ChuDes, "MaChuDe", "TenChuDe", sach.MaChuDe);
-            ViewBag.MaNXB = new SelectList(db.NhaXuatBans, "MaNXB", "TenNXB", sach.MaNXB);
-            return View(sach);
+            return View(chuDe);
         }
 
-        // GET: Admin/SachManager/Delete/5
+        // GET: Admin/ChuDeManager/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Sach sach = db.Saches.Find(id);
-            if (sach == null)
+            ChuDe chuDe = db.ChuDes.Find(id);
+            if (chuDe == null)
             {
                 return HttpNotFound();
             }
-            return View(sach);
+            return View(chuDe);
         }
 
-        // POST: Admin/SachManager/Delete/5
+        // POST: Admin/ChuDeManager/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Sach sach = db.Saches.Find(id);
-            db.Saches.Remove(sach);
+            ChuDe chuDe = db.ChuDes.Find(id);
+            db.ChuDes.Remove(chuDe);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

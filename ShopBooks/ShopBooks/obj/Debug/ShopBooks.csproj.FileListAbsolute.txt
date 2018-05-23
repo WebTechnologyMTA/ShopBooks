@@ -43,18 +43,18 @@ D:\Visual Studio Projects\ShopBooks\ShopBooks\bin\System.Web.Helpers.xml
 D:\Visual Studio Projects\ShopBooks\ShopBooks\bin\System.Web.Mvc.xml
 D:\Visual Studio Projects\ShopBooks\ShopBooks\obj\Debug\ShopBooks.dll
 D:\Visual Studio Projects\ShopBooks\ShopBooks\obj\Debug\ShopBooks.pdb
-C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\VBCSCompiler.exe
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\ApplicationInsights.config
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\csc.exe
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CSharp.Core.targets
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\System.Reflection.Metadata.dll
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\vbc.exe
+C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\VBCSCompiler.exe
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\ShopBooks.dll.config
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\ShopBooks.dll
