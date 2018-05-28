@@ -1,4 +1,4 @@
-namespace ShopBooks.Models
+﻿namespace ShopBooks.Models
 {
     using System;
     using System.Collections.Generic;
@@ -19,6 +19,7 @@ namespace ShopBooks.Models
         public int MaChuDe { get; set; }
 
         [StringLength(50)]
+        [Required(ErrorMessage = "Nhập tên chủ đề!")]
         public string TenChuDe { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

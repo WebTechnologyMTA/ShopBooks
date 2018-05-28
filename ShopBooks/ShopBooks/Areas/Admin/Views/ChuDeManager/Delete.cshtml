@@ -1,33 +1,54 @@
 ﻿@model ShopBooks.Models.ChuDe
-
 @{
-    ViewBag.Title = "Delete";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "ViewQLDH";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<link href="~/Content/assets/font-awesome/css/font-awesomes.css" rel="stylesheet" />
 
-<h2>Delete</h2>
+<div class="main-content-inner">
+    <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+        <ul class="breadcrumb">
+            <li>
+                <i class="ace-icon fa fa-home home-icon"></i>
+                <a href="home.html">Home</a>
+            </li>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>ChuDe</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.TenChuDe)
-        </dt>
+            <li>
+                <a href="jqgrid.html">Quản Lí Chủ Đề</a>
+            </li>
 
-        <dd>
-            @Html.DisplayFor(model => model.TenChuDe)
-        </dd>
+        </ul><!-- /.breadcrumb -->
 
-    </dl>
+        <div class="nav-search" id="nav-search">
+            <form class="form-search">
+                <span class="input-icon">
+                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                    <i class="ace-icon fa fa-search nav-search-icon"></i>
+                </span>
+            </form>
+        </div><!-- /.nav-search -->
+    </div>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+    <div class="page-content">
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
+        <dl class="dl-horizontal">
+            <dt>
+                Tên chủ đề
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TenChuDe)
+            </dd>
+        </dl>
+        @using (Html.BeginForm())
+            {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-success" })
+            </div>
+        }
+
+    </div><!-- /.page-content -->
 </div>

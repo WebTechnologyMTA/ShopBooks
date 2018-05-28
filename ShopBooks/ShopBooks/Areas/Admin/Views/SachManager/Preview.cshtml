@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Preview";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    .btn-create {
+        padding: 13px 10px;
+        color: white;
+        background: #8b6c6c;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .aaa {
+        margin-top: 20px;
+    }
+
+    table tr td {
+        border: 1px solid #e7d4d4;
+        text-align: center;
+    }
+
+    table tr th {
+        border: 1px solid #e7d4d4;
+        text-align: center;
+    }
+
+    .list-action {
+        display: inline-flex;
+        padding-top: 20px;
+    }
+</style>
+<link href="~/Content/assets/font-awesome/css/font-awesomes.css" rel="stylesheet" />
+
+<div class="main-content-inner">
+    <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+        <ul class="breadcrumb">
+            <li>
+                <i class="ace-icon fa fa-home home-icon"></i>
+                <a href="@Url.Action("Preview", "SachManager")">Home</a>
+            </li>
+
+            <li>
+                <a href="jqgrid.html">Quản Lí Đơn Hàng</a>
+            </li>
+
+        </ul><!-- /.breadcrumb -->
+    </div>
+</div>

@@ -20,6 +20,7 @@ namespace ShopBooks.Models
         public virtual DbSet<Sach> Saches { get; set; }
         public virtual DbSet<TacGia> TacGias { get; set; }
         public virtual DbSet<ThamGia> ThamGias { get; set; }
+        public virtual DbSet<UserAccount> UserAccounts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

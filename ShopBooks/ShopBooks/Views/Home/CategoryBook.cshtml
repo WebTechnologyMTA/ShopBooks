@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ShopBooks.Models.Sach>
+@{
+    ViewBag.Title = "ShopBooks";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<style>
+    .intro-txt {
+        margin-left: 20px;
+    }
+
+    .ttl {
+        margin-left: 20px;
+    }
+
+    .pnh {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid blue;
+    }
+</style>
+<div class="span9">
+    <ul class="breadcrumb">
+        <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+        <li><a href="products.html">Sản phẩm</a> <span class="divider">/</span></li>
+        <li class="active">Sản phẩm theo danh mục</li>
+    </ul>
+    <div class="well well-small">
+
+
+        @foreach (var item in Model)
+        {
+            <div class="row-fluid pnh">
+                <div class="span2">
+                    <img src="@Url.Content("~/HinhAnhSP/"+item.AnhBia)" style="height: 150px !important" alt="">
+                </div>
+                <div class="span6 col-txt">
+                    <h5 class="ttl">@item.TenSach </h5>
+                    <p class="intro-txt">
+                        @item.MoTa
+                    </p>
+                </div>
+                <div class="span4 alignR">
+                    <form class="form-horizontal qtyFrm">
+                        <h3> @item.GiaBan VNĐ</h3>
+                        <br>
+                        <div class="btn-group">
+                            <a href="@Url.Action("ThemGioHang","GioHang",new {@iMaSach = item.MaSach,@strURL =Request.Url.ToString()})" class="defaultBtn"><span class="icon-shopping-cart"></span> MUA HÀNG</a>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        }
+    </div>
+</div>

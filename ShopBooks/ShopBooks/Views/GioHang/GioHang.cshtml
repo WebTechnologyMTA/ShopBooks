@@ -1,0 +1,105 @@
+﻿@using ShopBooks.Models;
+@model List<GioHang>
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<style>
+    .input-append{
+    display:inline-flex;
+    margin-left: 20px;
+    }
+    .akn{
+        margin-top: -31px;
+    }
+    .soluong{
+    position:absolute;
+    border: 1px solid #a48080;
+    padding: 0px 5px;
+    }
+</style>
+<div class="span9">
+    <ul class="breadcrumb">
+        <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+        <li class="active">Giỏ Hàng	</li>
+    </ul>
+    <div class="well well-small">
+
+        <hr class="soften">
+
+        <table class="table table-bordered table-condensed">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Mô Tả</th>
+
+                    <th>Giá</th>
+                    <th>Số Luợng </th>
+                    <th>Thành Ti?n</th>
+                </tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+                <tbody>
+                   
+                    <tr>
+                        <td><img width="100" src="@Url.Content("~/HinhAnhSP/" + item.sAnhBia)" alt=""></td>
+                        <td>@item.sTenSach</td>
+
+                        <td>@String.Format("{0:0,0}", item.dDonGia.ToString()) VNÐ</td>
+                        <td class="col4">
+                          <span class="soluong">@item.iSoLuong</span> 
+                            <div class="input-append">
+                                @using (Html.BeginForm("BotGioHang", "GioHang", new { @iMaSach = item.iMaSach, @strURL = Request.Url.ToString() }))
+                                {
+                                    <button class="btn btn-mini" type="submit">-</button>
+                                }
+                                @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMaSach = item.iMaSach, @strURL = Request.Url.ToString() }))
+                                {
+                                    <button class="btn btn-mini" type="submit">+</button>
+                                }
+                                @using (Html.BeginForm("XoaGioHang", "GioHang", new { @iMaSP = item.iMaSach }))
+                                {
+                                    <button class="btn btn-mini btn-danger" type="submit"><span class="icon-remove"></span></button>
+                                }
+
+                            </div>
+                        </td>
+                        <td>@String.Format("{0:0,0}", item.ThanhTien.ToString()) VNÐ</td>
+                    </tr>
+                    <tr></tr>
+
+
+
+                </tbody>
+            }
+        </table>
+        <br>
+
+
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td>
+                        <form class="form-inline">
+                            <label style="min-width:159px"> Mã Giảm Giá  </label>
+                            <input type="text" class="input-medium" placeholder="CODE">
+                            <button type="submit" class="shopBtn"> Thêm</button>
+                        </form>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-bordered">
+            <tbody></tbody>
+        </table>
+        <a href="http://localhost:51064/Home/Index" class="shopBtn btn-large"><span class="icon-arrow-left"></span> Tiếp tục mua hàng </a>
+        @using (Html.BeginForm("DatHang", "GioHang"))
+        {
+            <button href="http://localhost:51064/Home/Index" class="shopBtn btn-large pull-right akn" type="submit"> Ðăt Hàng <span class="icon-arrow-right"></span></button>
+        }
+        <hr />
+    </div>
+</div>
+

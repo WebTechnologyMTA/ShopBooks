@@ -1,0 +1,57 @@
+﻿@model PagedList.IPagedList<Sach>
+@using PagedList.Mvc
+@using ShopBooks.Models
+
+        
+
+<div class="well well-small">
+    <h3> Sản phẩm được mua nhiều nhất  </h3>
+    <hr class="soften" />
+    <div class="row-fluid">
+
+        <ul class="thumbnails">
+@foreach (var item in Model)
+{
+            <li class="span4" style="margin-left:-0.4%">
+                <div class="thumbnail">
+                    <a class="zoomTool" href="">
+                    <span class="icon-search"></span> Mua</a>
+                    <a href="/Product/ProductDetails/@item.MaSach">
+                    <img src="@Url.Content("~/HinhAnhSP/"+item.AnhBia)" style="height: 150px !important" alt=""></a>
+                    <div class="caption">
+                        @if (item.TenSach.Length < 20)
+                        {
+                            <h5>@item.TenSach</h5>
+                        }
+                        else
+                        {
+                            <h5>@item.TenSach.Substring(0,20)...</h5>
+                        }
+                        <h4>
+                            <a class="defaultBtn" href="/Product/ProductDetails/@item.MaSach" title="Click to view"><span class="icon-zoom-in"></span></a>
+                            <a class="shopBtn" href="@Url.Action("ThemGioHang", "GioHang", new { @iMaSach = item.MaSach, @strURL = Request.Url.ToString() })" title="add to cart"><span class="icon-plus"></span></a>
+                            <span class="giaban">@item.GiaBan <span>VND</span></span>
+                        </h4>
+                    </div>
+                </div>
+            </li>
+}
+        </ul>
+       <div class="menutrang">
+           @Html.PagedListPager(Model,page => Url.Action("Index",new { page=page}))
+       </div>
+        <a class="left carousel-control" href="#newProductCar" data-slide="prev">&lsaquo;</a>
+        <a class="right carousel-control" href="#newProductCar" data-slide="next">&rsaquo;</a>
+    </div>
+</div>
+<style>
+    .menutrang li{
+        display:inline-block;
+        border: 1px solid #806868;
+        margin-right: 2%;
+       
+    }
+    .menutrang li a {
+             padding: 10px;
+    }
+</style>

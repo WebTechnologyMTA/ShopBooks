@@ -1,98 +1,145 @@
 ﻿@model IEnumerable<ShopBooks.Models.Sach>
-
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "ViewQLDH";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<link href="~/Content/assets/font-awesome/css/font-awesomes.css" rel="stylesheet" />
 
-@helper Truncate(string input, int length)
-{
-    if (input.Length <= length)
-    {
-        @input
-    }
-    else
-    {
-        @input.Substring(0, length)<text>...</text>
-    }
-}
+<div class="main-content-inner">
+    <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+        <ul class="breadcrumb">
+            <li>
+                <i class="ace-icon fa fa-home home-icon"></i>
+                <a href="home.html">Home</a>
+            </li>
 
-<div id="page-wrapper">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Dashboard</h1>
+            <li>
+                <a href="jqgrid.html">Quản Lí Sản Phẩm</a>
+            </li>
+
+        </ul><!-- /.breadcrumb -->
+
+        <div class="nav-search" id="nav-search">
+            <form class="form-search">
+                <span class="input-icon">
+                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                    <i class="ace-icon fa fa-search nav-search-icon"></i>
+                </span>
+            </form>
+        </div><!-- /.nav-search -->
+    </div>
+
+    <div class="page-content">
+        <h5><a href="@Url.Action("Create", "SachManager", new { area = "Admin" })">Thêm mới</a></h5>
+        <div class="col-md-offset-2 col-md-10">
         </div>
-        <!-- /.col-lg-12 -->
-    </div>
-    <div class="row">
-        <p>
-            @Html.ActionLink("Create New", "Create")
-        </p>
-        <table class="table table-bordered table-hover">
-            <tr style="background-color:Highlight">
-                <th  style="text-align:center">
-                    Tên chủ đề
-                </th>
-                <th>
-                    Tên nhà xuất bản
-                </th>
-                <th style="width:60px">
-                    Tên sách
-                </th>
-                <th>
-                    Giá bán
-                </th>
-                <th>
-                    Mô tả
-                </th>
-                <th>
-                    Ngày cập nhật
-                </th>
-                <th>
-                    Ảnh bìa
-                </th>
-                <th>
-                    Số lượng
-                </th>
-                <th></th>
-            </tr>
+        <div class="col-xs-12">
+            <table id="simple-table" class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th class="center detail-col">
+                            <label class="pos-rel">
+                                <input type="checkbox" class="ace check-all" />
+                                <span class="lbl"></span>
+                            </label>
+                        </th>
+                        <th class="center detail-col">Mã Sản phẩm</th>
+                        <th class="center">Ảnh</th>
+                        <th class="center">Tên</th>
+                        <th class="center">Giá</th>
 
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ChuDe.TenChuDe)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.NhaXuatBan.TenNXB)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.TenSach)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.GiaBan)
-                    </td>
-                    <td>
-                        @Truncate(item.MoTa, 100)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.NgayCapNhat)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.AnhBia)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.SoLuongTon)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.MaSach }, new { @class = "btn btn-primary"})
-                        @Html.ActionLink("Details", "Details", new { id = item.MaSach }, new { @class = "btn btn-success"})
-                        @Html.ActionLink("Delete", "Delete", new { id = item.MaSach }, new { @class = "btn btn-danger" })
-                    </td>
-                </tr>
-            }
+                        <th class="center">Số lượng tồn</th>
 
-        </table>
-    </div>
+                        <th class="col-md-1 center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td class="center detail-col">
+                                <label class="pos-rel">
+                                    <input type="checkbox" class="ace cbx-id" value="demo1" valueLock="@*@item.lock_version*@" />
+                                    <span class="lbl"></span>
+                                </label>
+                            </td>
+                            <td class="center">
+                                @item.MaSach
+                            </td>
+                            <td class="center">
+                                <img src="@Url.Content("~/HinhAnhSP/"+item.AnhBia)" style="width:100px" />
+                            </td>
+                            <td class="center">
+                                @item.TenSach
+                            </td>
+                            <td class="center">
+                                @item.GiaBan
+                            </td>
+                            <td class="center">
+                                @item.SoLuongTon
+                            </td>
+
+                            <td class="center">
+                                <div class="hidden-sm hidden-xs btn-group">
+                                    <a href="@Url.Action("Edit","SachManager", new { @id=item.MaSach})" class="btn btn-xs btn-info">
+                                        <i class="ace-icon fa fa-pencil bigger-120"></i>
+                                    </a>
+                                    <a href="@Url.Action("Delete","SachManager", new { @id=item.MaSach})" class="btn btn-xs btn-danger">
+                                        <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                    </a>
+                                </div>
+
+                                <div class="hidden-md hidden-lg">
+                                    <div class="inline pos-rel">
+                                        <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                            <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+                                        </button>
+
+                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                            <li>
+                                                <a href="" class="tooltip-success" data-rel="tooltip" title="Edit">
+                                                    <span class="green">
+                                                        <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+                                                    <span class="red">
+                                                        <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- PAGE CONTENT BEGINS -->
+                <div class="alert alert-info">
+                    <button class="close" data-dismiss="alert">
+                        <i class="ace-icon fa fa-times"></i>
+                    </button>
+
+                    <i class="ace-icon fa fa-hand-o-right"></i>
+                    Please note that demo server is not configured to save the changes, therefore you may see an error message.
+                </div>
+
+                <table id="grid-table"></table>
+
+                <div id="grid-pager"></div>
+
+                <!-- PAGE CONTENT ENDS -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.page-content -->
 </div>
-<!-- /#page-wrapper -->

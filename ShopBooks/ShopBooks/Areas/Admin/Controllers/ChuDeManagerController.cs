@@ -6,6 +6,8 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 using ShopBooks.Models;
 
 namespace ShopBooks.Areas.Admin.Controllers
@@ -15,9 +17,11 @@ namespace ShopBooks.Areas.Admin.Controllers
         private ModelDbContext db = new ModelDbContext();
 
         // GET: Admin/ChuDeManager
-        public ActionResult Index()
+        public ActionResult Index(int ? page)
         {
-            return View(db.ChuDes.ToList());
+            int pageNumber = (page ?? 1);
+            int pageSize = 10;
+            return View(db.ChuDes.ToList().ToPagedList(pageNumber, pageSize));
         }
 
         public ActionResult PartialCategories()

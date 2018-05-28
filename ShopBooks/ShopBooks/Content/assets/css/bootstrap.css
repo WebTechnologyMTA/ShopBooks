@@ -409,19 +409,19 @@ a:focus {
   float: left;
   width: 100%;
   min-height: 30px;
-  margin-left: 2.127659574468085%;
-  *margin-left: 2.074468085106383%;
+  margin-left:0.12766%;
+  *margin-left: 0.12766%;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .row-fluid [class*="span"]:first-child {
-  margin-left: 0;
+
 }
 
 .row-fluid .controls-row [class*="span"] + [class*="span"] {
-  margin-left: 2.127659574468085%;
+  
 }
 
 .row-fluid .span12 {

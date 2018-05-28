@@ -43,18 +43,18 @@ D:\Visual Studio Projects\ShopBooks\ShopBooks\bin\System.Web.Helpers.xml
 D:\Visual Studio Projects\ShopBooks\ShopBooks\bin\System.Web.Mvc.xml
 D:\Visual Studio Projects\ShopBooks\ShopBooks\obj\Debug\ShopBooks.dll
 D:\Visual Studio Projects\ShopBooks\ShopBooks\obj\Debug\ShopBooks.pdb
+C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\VBCSCompiler.exe
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\ApplicationInsights.config
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\csc.exe
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CSharp.Core.targets
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\System.Reflection.Metadata.dll
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\vbc.exe
-C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\VBCSCompiler.exe
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\ShopBooks.dll.config
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\ShopBooks.dll
@@ -92,3 +92,114 @@ C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.H
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Mvc.xml
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\obj\Debug\ShopBooks.dll
 C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\obj\Debug\ShopBooks.pdb
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\ApplicationInsights.config
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\csc.exe
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\System.Collections.Immutable.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\System.Reflection.Metadata.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\vbc.exe
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\VBCSCompiler.exe
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\VBCSCompiler.exe.config
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\ShopBooks.dll.config
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\ShopBooks.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\ShopBooks.pdb
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\EntityFramework.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\EntityFramework.SqlServer.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.DependencyCollector.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.Web.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.WindowsServer.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.ApplicationInsights.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.Web.Infrastructure.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Helpers.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Mvc.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Razor.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Webpages.Deployment.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Webpages.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Webpages.Razor.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\EntityFramework.xml
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\EntityFramework.SqlServer.xml
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.DependencyCollector.xml
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.Web.xml
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.WindowsServer.xml
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.ApplicationInsights.xml
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Razor.xml
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Webpages.xml
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Webpages.Deployment.xml
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Webpages.Razor.xml
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Helpers.xml
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Mvc.xml
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\obj\Debug\ShopBooks.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\obj\Debug\ShopBooks.pdb
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\PagedList.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\PagedList.Mvc.dll
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\PagedList.xml
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\bin\PagedList.Mvc.xml
+E:\Cong Nghe Web\SachOnline\ShopBooks\ShopBooks\ShopBooks\obj\Debug\ShopBooks.csprojResolveAssemblyReference.cache
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\ApplicationInsights.config
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\csc.exe
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\vbc.exe
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\VBCSCompiler.exe
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\ShopBooks.dll.config
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\ShopBooks.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\ShopBooks.pdb
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\EntityFramework.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\EntityFramework.SqlServer.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.Web.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\PagedList.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\PagedList.Mvc.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Helpers.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Mvc.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Razor.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Webpages.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Webpages.Razor.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\EntityFramework.xml
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\EntityFramework.SqlServer.xml
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.Web.xml
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\PagedList.xml
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\PagedList.Mvc.xml
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Razor.xml
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Webpages.xml
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Webpages.Razor.xml
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Helpers.xml
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\bin\System.Web.Mvc.xml
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\obj\Debug\ShopBooks.dll
+C:\Users\Thao Le\Downloads\ShopBooks\ShopBooks\ShopBooks\obj\Debug\ShopBooks.pdb
+C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\PagedList.dll
+C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\PagedList.Mvc.dll
+C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\PagedList.xml
+C:\Users\MienAnh\Documents\GitHub\ShopBooks\ShopBooks\ShopBooks\bin\PagedList.Mvc.xml

@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -35,11 +38,11 @@
                         <a href="#"><span class="icon-youtube"></span></a>
                         <a href="#"><span class="icon-tumblr"></span></a>
                     </div>
-                    <a class="active" href="@Html.ActionLink("Link text here", "Action's name")"><span class="icon-home"></span> Home</a>
+                    <a class="active" href="@Url.Action("Index", "Home")"> <span class="icon-home"></span> Home</a>
                     <a href="#"><span class="icon-user"></span> My Account</a>
                     <a href="register.html"><span class="icon-edit"></span> Free Register </a>
                     <a href="contact.html"><span class="icon-envelope"></span> Contact us</a>
-                    <a href="cart.html"><span class="icon-shopping-cart"></span> 2 Item(s) - <span class="badge badge-warning"> $448.42</span></a>
+                    @Html.Action("GioHangPartial", "GioHang")
                 </div>
             </div>
         </div>
@@ -85,35 +88,24 @@
                     </a>
                     <div class="nav-collapse">
                         <ul class="nav">
-                            <li class=""><a href="/Home/Index">Home    </a></li>
-                            <li class=""><a href="/Home/Contact">Liên Hệ</a></li>
-                            <li class=""><a href="/Home/About">Giới Thiệu</a></li>
-                            <li class=""><a href="#">Điều khoản</a></li>
-                            <li class=""><a href="#">Hướng dẫn mua hàng</a></li>
-                            <li class=""><a href="#"></a></li>
+                            <li class="active"><a href="@Url.Action("Index", "Home")">Home	</a></li>
+                            <li class=""><a href="contact.html">Liên Hệ</a></li>
+                            <li class=""><a href="about.html">Giới Thiệu</a></li>
+                            <li class=""><a href=".html">Điều khoản</a></li>
+                            <li class=""><a href=".html">Hướng dẫn mua hàng</a></li>
+                            <li class=""><a href=".html"></a></li>
                         </ul>
-                        <form action="#" class="navbar-search pull-left">
-                            <input type="text" placeholder="Search" class="search-query span2">
+                        <form action="/Home/Search" class="navbar-search pull-left" method="post">
+
+
+                            <input type="text" name="name" placeholder="Search" class="search-query span2">
+                            <input type="submit" value="Search" />
+
+
                         </form>
                         <ul class="nav pull-right">
-                            <li class="dropdown">
-                                <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Login <b class="caret"></b></a>
-                                <div class="dropdown-menu">
-                                    <form class="form-horizontal loginFrm">
-                                        <div class="control-group">
-                                            <input type="text" class="span2" id="inputEmail" placeholder="Email">
-                                        </div>
-                                        <div class="control-group">
-                                            <input type="password" class="span2" id="inputPassword" placeholder="Password">
-                                        </div>
-                                        <div class="control-group">
-                                            <label class="checkbox">
-                                                <input type="checkbox"> Remember me
-                                            </label>
-                                            <button type="submit" class="shopBtn btn-block">Sign in</button>
-                                        </div>
-                                    </form>
-                                </div>
+                            <li>
+                                <a href="@Url.Action("Index", "Login")"><span class="icon-lock"></span>Login</a>
                             </li>
                         </ul>
                     </div>
@@ -126,7 +118,8 @@
         <div class="row">
             <div id="sidebar" class="span3">
                 <div class="well well-small">
-                    @{Html.RenderAction("PartialMenuList", "Home");}
+                    @{Html.RenderAction("PartialMenuList", "Home");
+                    }
                 </div>
 
                 <div class="well well-small alert alert-warning cntr">
@@ -144,7 +137,7 @@
                     <li>
                         <div class="thumbnail">
                             <a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-                            <img class="image-book" src="~/Content/assets/img/4.jpg" alt="bootstrap ecommerce templates">
+                            <img src="~/Content/assets/img/4.jpg" alt="bootstrap ecommerce templates">
                             <div class="caption">
                                 <h4><a class="defaultBtn" href="product_details.html">VIEW</a> <span class="pull-right">$22.00</span></h4>
                             </div>
@@ -154,7 +147,7 @@
                     <li>
                         <div class="thumbnail">
                             <a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-                            <img class="image-book" src="~/Content/assets/img/5.jpg" alt="shopping cart template">
+                            <img src="~/Content/assets/img/5.jpg" alt="shopping cart template">
                             <div class="caption">
                                 <h4><a class="defaultBtn" href="product_details.html">VIEW</a> <span class="pull-right">$22.00</span></h4>
                             </div>
@@ -164,7 +157,7 @@
                     <li>
                         <div class="thumbnail">
                             <a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-                            <img class="image-book" src="~/Content/assets/img/6.jpg" alt="bootstrap template">
+                            <img src="~/Content/assets/img/6.jpg" alt="bootstrap template">
                             <div class="caption">
                                 <h4><a class="defaultBtn" href="product_details.html">VIEW</a> <span class="pull-right">$22.00</span></h4>
                             </div>
@@ -177,27 +170,7 @@
             <!--
             Clients
             -->
-            <section class="our_client">
-                <hr class="soften" />
-                <h4 class="title cntr"><span class="text">Manufactures</span></h4>
-                <hr class="soften" />
-                <div class="row">
-                    <div class="span2">
-                        <a href="#"><img alt="" style="height:105px" src="~/Content/assets/img/2.jpg"></a>
-                    </div>
-                    <div class="span2">
-                        <a href="#"><img alt="" style="height:105px" src="~/Content/assets/img/3.jpg"></a>
-                    </div>
-                    <div class="span2">
-                        <a href="#"><img alt="" style="height:105px" src="~/Content/assets/img/4.jpg"></a>
-                    </div>
-                    <div class="span2">
-                        <a href="#"><img alt="" style="height:105px" src="~/Content/assets/img/5.jpg"></a>
-                    </div>
 
-
-                </div>
-            </section>
         </div>
     </div>
     <!-- /container -->

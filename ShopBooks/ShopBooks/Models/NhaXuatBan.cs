@@ -1,4 +1,4 @@
-namespace ShopBooks.Models
+﻿namespace ShopBooks.Models
 {
     using System;
     using System.Collections.Generic;
@@ -18,12 +18,15 @@ namespace ShopBooks.Models
         [Key]
         public int MaNXB { get; set; }
 
+        [Required(ErrorMessage = "Nhập tên nhà xuất bản!")]
         [StringLength(50)]
         public string TenNXB { get; set; }
 
+        [Required(ErrorMessage = "Nhập địa chỉ!")]
         [StringLength(100)]
         public string DiaChi { get; set; }
 
+        [Required(ErrorMessage = "Nhập số điện thoại!")]
         [StringLength(50)]
         public string DienThoai { get; set; }
 

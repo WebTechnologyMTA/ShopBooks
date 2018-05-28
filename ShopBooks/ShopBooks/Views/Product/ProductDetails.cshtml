@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ShopBooks.Models.Sach>
+@{
+    ViewBag.Title = "ShopBooks";
+    Layout = "~/Views/Shared/_ProductLayout.cshtml";
+}
+
+<div class="span9">
+    <ul class="breadcrumb">
+        <li><a href="@Url.Action("Index", "Home")">Home</a> <span class="divider">/</span></li>
+        <li><a href="products.html">Sản phẩm</a> <span class="divider">/</span></li>
+        <li class="active">Sản phẩm theo danh mục</li>
+    </ul>
+    <div class="well well-small">
+
+
+        @foreach (var item in Model)
+        {
+            <div class="row-fluid">
+                <div class="span2">
+                    <img src="@Url.Content("~/HinhAnhSP/"+item.AnhBia)" alt="">
+                </div>
+                <div class="span6">
+                    <h5>@item.TenSach </h5>
+                    <p>
+                        @item.MoTa
+                    </p>
+                </div>
+                <div class="span4 alignR">
+                    <form class="form-horizontal qtyFrm">
+                        <h3> @item.GiaBan</h3><br>
+                        <div class="btn-group">
+                            <a href="@Url.Action("ThemGioHang","GioHang",new {@iMaSach = item.MaSach,@strURL =Request.Url.ToString()})" class="defaultBtn"><span class="icon-shopping-cart"></span> Add to cart</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        }
+    </div>
+</div>

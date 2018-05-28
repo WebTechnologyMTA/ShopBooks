@@ -6,7 +6,10 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 using ShopBooks.Models;
+using System.IO;
 
 namespace ShopBooks.Areas.Admin.Controllers
 {
@@ -14,11 +17,17 @@ namespace ShopBooks.Areas.Admin.Controllers
     {
         private ModelDbContext db = new ModelDbContext();
 
-        // GET: Admin/SachManager
-        public ActionResult Index()
+        public ActionResult Preview()
         {
+            return View();
+        }
+        // GET: Admin/SachManager
+        public ActionResult Index(int? page)
+        {
+            int pageNumber = (page ?? 1);
+            int pageSize = 10;
             var saches = db.Saches.Include(s => s.ChuDe).Include(s => s.NhaXuatBan);
-            return View(saches.ToList());
+            return View(saches.OrderByDescending(x => x.MaSach).ToList().ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Admin/SachManager/Details/5
@@ -47,10 +56,32 @@ namespace ShopBooks.Areas.Admin.Controllers
         // POST: Admin/SachManager/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaSach,TenSach,GiaBan,MoTa,NgayCapNhat,AnhBia,SoLuongTon,MaChuDe,MaNXB,Moi")] Sach sach)
+        public ActionResult Create(HttpPostedFileBase fileUpload, [Bind(Include = "MaSach,TenSach,GiaBan,MoTa,AnhBia,NgayCapNhat,SoLuongTon,MaChuDe,MaNXB,Moi")] Sach sach)
         {
+            //Kiểm tra đường dẫn ảnh bìa
+            if (fileUpload == null)
+            {
+                ViewBag.ThongBao = "Chọn hình ảnh!";
+                return View();
+            }
+
             if (ModelState.IsValid)
             {
+                //Lưu tên file
+                var fileName = Path.GetFileName(fileUpload.FileName);
+                //Lưu đường dẫn của file
+                var path = Path.Combine(Server.MapPath("~/HinhAnhSP"), fileName);
+                //Kiểm tra hình ảnh đã tồn tại chưa
+                if (System.IO.File.Exists(path))
+                {
+                    ViewBag.ThongBao = "Hình ảnh đã tồn tại";
+                }
+                else
+                {
+                    fileUpload.SaveAs(path);
+                }
+                sach.AnhBia = fileUpload.FileName;
+                sach.NgayCapNhat = DateTime.Now;
                 db.Saches.Add(sach);
                 db.SaveChanges();
                 return RedirectToAction("Index");

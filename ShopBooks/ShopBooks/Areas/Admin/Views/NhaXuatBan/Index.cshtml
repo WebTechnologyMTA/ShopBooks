@@ -1,0 +1,136 @@
+﻿@model IEnumerable<ShopBooks.Models.NhaXuatBan>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="main-content-inner">
+    <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+        <ul class="breadcrumb">
+            <li>
+                <i class="ace-icon fa fa-home home-icon"></i>
+                <a href="home.html">Home</a>
+            </li>
+
+            <li>
+                <a href="jqgrid.html">Quản Lí Nhà Xuất Bản</a>
+            </li>
+
+        </ul><!-- /.breadcrumb -->
+
+        <div class="nav-search" id="nav-search">
+            <form class="form-search">
+                <span class="input-icon">
+                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                    <i class="ace-icon fa fa-search nav-search-icon"></i>
+                </span>
+            </form>
+        </div><!-- /.nav-search -->
+    </div>
+
+    <div class="page-content">
+        <h5><a href="@Url.Action("Create", "NhaXuatBan", new { area = "Admin" })">Thêm mới</a></h5>
+        <div class="col-md-offset-2 col-md-10">
+        </div>
+        <div class="col-xs-12">
+            <table id="simple-table" class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th class="center detail-col">
+                            <label class="pos-rel">
+                                <input type="checkbox" class="ace check-all" />
+                                <span class="lbl"></span>
+                            </label>
+                        </th>
+                        <th class="center">Tên nhà xuất bản</th>
+                        <th class="center">Địa chỉ</th>
+                        <th class="center">Số điện thoại</th>
+
+                        <th class="col-md-1 center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td class="center detail-col">
+                                <label class="pos-rel">
+                                    <input type="checkbox" class="ace cbx-id" value="demo1" valueLock="@*@item.lock_version*@" />
+                                    <span class="lbl"></span>
+                                </label>
+                            </td>
+                            <td class="center">
+                                @item.TenNXB
+                            </td>
+                            <td class="center">
+                                @item.DiaChi
+                            </td>
+                            <td class="center">
+                                @item.DienThoai
+                            </td>
+
+                            <td class="center">
+                                <div class="hidden-sm hidden-xs btn-group">
+                                    <a href="@Url.Action("Edit","NhaXuatBan", new { @id=item.MaNXB})" class="btn btn-xs btn-info">
+                                        <i class="ace-icon fa fa-pencil bigger-120"></i>
+                                    </a>
+                                    <a href="@Url.Action("Delete","NhaXuatBan", new { @id=item.MaNXB})" class="btn btn-xs btn-danger">
+                                        <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                    </a>
+                                </div>
+
+                                <div class="hidden-md hidden-lg">
+                                    <div class="inline pos-rel">
+                                        <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                            <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+                                        </button>
+
+                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                            <li>
+                                                <a href="" class="tooltip-success" data-rel="tooltip" title="Edit">
+                                                    <span class="green">
+                                                        <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+                                                    <span class="red">
+                                                        <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- PAGE CONTENT BEGINS -->
+                <div class="alert alert-info">
+                    <button class="close" data-dismiss="alert">
+                        <i class="ace-icon fa fa-times"></i>
+                    </button>
+
+                    <i class="ace-icon fa fa-hand-o-right"></i>
+                    Please note that demo server is not configured to save the changes, therefore you may see an error message.
+                </div>
+
+                <table id="grid-table"></table>
+
+                <div id="grid-pager"></div>
+
+                <!-- PAGE CONTENT ENDS -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.page-content -->
+</div>

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ShopBooks.Models.Sach>
+@{
+    ViewBag.Title = "ShopBooks";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<div class="well well-small">
+    <h3> Sản phẩm bạn đã tìm kiếm  </h3>
+    <hr class="soften" />
+    <div class="row-fluid">
+
+        <ul class="thumbnails">
+            @foreach (var item in Model)
+            {
+                <li class="span4">
+                    <div class="thumbnail">
+                        <a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> Mua</a>
+                        <a href="product_details.html"><img src="@item.AnhBia" style="height: 150px" alt=""></a>
+                        <div class="caption">
+                            <h5>@item.TenSach</h5>
+                            <h4>
+                                <a class="defaultBtn" href="product_details.html" title="Click to view"><span class="icon-zoom-in"></span></a>
+                                <a class="shopBtn" href="#" title="add to cart"><span class="icon-plus"></span></a>
+                                <span class="pull-right">@item.GiaBan</span>
+                            </h4>
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+        <a class="left carousel-control" href="#newProductCar" data-slide="prev">&lsaquo;</a>
+        <a class="right carousel-control" href="#newProductCar" data-slide="next">&rsaquo;</a>
+    </div>
+</div>
+

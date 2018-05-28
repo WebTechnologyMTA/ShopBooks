@@ -1,4 +1,5 @@
-﻿using ShopBooks.Models;
+﻿using PagedList;
+using ShopBooks.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,28 +12,48 @@ namespace ShopBooks.Controllers
     {
         ModelDbContext db = new ModelDbContext();
         // GET: Home
-        public ActionResult Index()
+        
+        public ActionResult Index(int? page)
         {
-            List<Sach> ls = new List<Sach>();
-            var ListProduct = db.Saches.Take(3);
-            foreach (var item in ListProduct)
-            {
-                item.AnhBia = "/Content/assets/product_img/" + item.AnhBia;
-                ls.Add(item);
-            }
-            return View(ls);
+            //@model IEnumerable<ShopBooks.Models.Sach>
+            int pageSize = 9;
+            int pageNumber = (page ?? 1);
+            return View(db.Saches.Where(n =>n.Moi==1).OrderBy(n=>n.GiaBan).ToPagedList(pageNumber,pageSize));
         }
-
-        public ActionResult Contact()
+      
+     
+        public ActionResult ListBook()
         {
-            return View();
+            return View(db.Saches);
+        }
+       
+
+        [HttpPost]
+        public ActionResult Search(string name)
+        {
+            var task= from t in db.Saches select t;
+
+            if (name == null)
+            {
+                ViewBag.Message = "Khong co sach nao phu hop";
+            }
+
+            else
+            {
+                task = task.Where(x => x.TenSach.Contains(name));
+            }
+                return View(task);
+        }
+        public ActionResult CategoryBook(int macate)
+        {
+            return View(db.Saches.Where(x => x.MaChuDe == macate));
         }
 
         public ActionResult About()
         {
             return View();
         }
-        // GET: Chu De
+
         public PartialViewResult PartialMenuList()
         {
             List<ChuDe> ls = new List<ChuDe>();
@@ -41,26 +62,6 @@ namespace ShopBooks.Controllers
                 ls.Add(item);
             }
             return PartialView("_PartialMenuList", ls);
-        }
-
-        // GET: Category/ID
-        public ActionResult Browse(int ID)
-        {
-            List<Sach> ls = db.Saches.Where(x => x.MaChuDe == ID).ToList();
-            foreach(var item in ls)
-            {
-                item.AnhBia = "/Content/assets/product_img/" + item.AnhBia;
-            }
-            return View(ls);
-        }
-
-        // GET: ProductDetail/ID
-        public ActionResult ProductDetails(int ID)
-        {
-            var sach = db.Saches.Where(x => x.MaSach == ID).SingleOrDefault();
-            sach.AnhBia = "/Content/assets/product_img/" + sach.AnhBia;
-            sach.NhaXuatBan = db.NhaXuatBans.Where(x => x.MaNXB == sach.MaNXB).SingleOrDefault();
-            return View(sach);
         }
     }
 }

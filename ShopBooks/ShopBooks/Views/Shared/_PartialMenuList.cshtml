@@ -4,9 +4,10 @@
     @foreach (var item in Model)
     {
         <li>
-            @*Not use razor*@
-            @*<a href="/Home/Browse?ID=@item.MaChuDe"><span class="icon-chevron-right"></span>@item.TenChuDe</a>*@
-            @Html.ActionLink(item.TenChuDe, "Browse", "Home", new { ID = item.MaChuDe }, null)
+            <a href="@Url.Action("CategoryBook", "Home", new { @macate = item.MaChuDe })">
+                <span class="icon-chevron-right"></span>
+                @item.TenChuDe
+            </a>
         </li>
     }
     <li style="border:0">&nbsp;</li>
